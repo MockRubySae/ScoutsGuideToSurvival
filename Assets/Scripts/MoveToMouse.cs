@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class MoveToMouse : MonoBehaviour
 {
-    NavMeshAgent agent;
+    public NavMeshAgent agent;
     public RayCast go;
     // Start is called before the first frame update
     void Start()
@@ -16,6 +16,10 @@ public class MoveToMouse : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        agent.SetDestination(go.destination);
+        if (agent.enabled)
+        {
+            agent.SetDestination(go.destination);
+        }
+        
     }
 }
