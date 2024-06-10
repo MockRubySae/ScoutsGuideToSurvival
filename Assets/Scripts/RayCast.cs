@@ -6,6 +6,8 @@ public class RayCast : MonoBehaviour
 {
     public Vector3 destination;
     Camera m_Camera;
+
+    public LayerMask ground;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +26,7 @@ public class RayCast : MonoBehaviour
         {
             Ray ray = m_Camera.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, 100))
+            if (Physics.Raycast(ray, out hit, 100, ground))
             {
                 destination = hit.point;
                 Debug.Log(hit.point);

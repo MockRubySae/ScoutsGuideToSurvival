@@ -13,6 +13,7 @@ public class FireMiniGame : MonoBehaviour
     bool start = false;
     float score = 0;
     public Image image;
+    public bool complete = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -62,6 +63,7 @@ public class FireMiniGame : MonoBehaviour
             start = false;
             fireUI.SetActive(false);
             Time.timeScale = 1;
+            complete = true;
         }
         else if(score < 100 && score > 0)
         {
