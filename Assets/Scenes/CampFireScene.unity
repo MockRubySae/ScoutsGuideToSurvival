@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2262.555, g: 2404.0588, b: 3501.6724, a: 1}
+  m_IndirectSpecularColor: {r: 2263.172, g: 2404.555, b: 3502.016, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -693,7 +693,6 @@ GameObject:
   - component: {fileID: 395095326}
   - component: {fileID: 395095325}
   - component: {fileID: 395095324}
-  - component: {fileID: 395095328}
   m_Layer: 0
   m_Name: Stick
   m_TagString: Stick
@@ -787,27 +786,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &395095328
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 395095323}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &401328017 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: eb3d46d3bd2712947b036101ff5ce59f,
@@ -1314,17 +1292,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: eb3d46d3bd2712947b036101ff5ce59f,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.6
+      value: 0.34
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb3d46d3bd2712947b036101ff5ce59f,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.6
+      value: 0.34
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb3d46d3bd2712947b036101ff5ce59f,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.6
+      value: 0.34
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb3d46d3bd2712947b036101ff5ce59f,
         type: 3}
@@ -1379,7 +1357,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: eb3d46d3bd2712947b036101ff5ce59f,
         type: 3}
       propertyPath: m_ConstrainProportionsScale
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: eb3d46d3bd2712947b036101ff5ce59f,
         type: 3}
@@ -1639,7 +1617,6 @@ GameObject:
   - component: {fileID: 1614809862}
   - component: {fileID: 1614809861}
   - component: {fileID: 1614809860}
-  - component: {fileID: 1614809859}
   m_Layer: 0
   m_Name: Stick (2)
   m_TagString: Stick
@@ -1647,27 +1624,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &1614809859
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1614809858}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &1614809860
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2437,7 +2393,6 @@ GameObject:
   - component: {fileID: 2071256366}
   - component: {fileID: 2071256365}
   - component: {fileID: 2071256364}
-  - component: {fileID: 2071256363}
   m_Layer: 0
   m_Name: Stick (1)
   m_TagString: Stick
@@ -2445,27 +2400,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &2071256363
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2071256362}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &2071256364
 BoxCollider:
   m_ObjectHideFlags: 0

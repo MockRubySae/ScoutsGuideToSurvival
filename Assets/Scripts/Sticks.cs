@@ -14,7 +14,7 @@ public class Sticks : MonoBehaviour
     public void CollectStick()
     {
         numOfSticksCollected++;
-        move.agent.enabled = false;
+        move.agent.speed = 0;
         indicator.SetActive(true);
         StartCoroutine(ControlDesableTime());
     }
@@ -22,7 +22,7 @@ public class Sticks : MonoBehaviour
     IEnumerator ControlDesableTime()
     {
         yield return new WaitForSeconds(3);
-        move.agent.enabled = true;
+        move.agent.speed = 3.5f;
         indicator.SetActive(false);
         destroyStick = true;
     }

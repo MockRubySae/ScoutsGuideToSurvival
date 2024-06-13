@@ -14,6 +14,10 @@ public class RopeMiniGame : MonoBehaviour
     public GameObject gameUI;
     public bool isStarting = false;
 
+    private void Start()
+    {
+        isStarting = false;
+    }
     // Update is called once per frame
     void Update()
     {
