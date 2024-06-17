@@ -16,6 +16,8 @@ public class RaftMovement : MonoBehaviour
     private NavMeshAgent agent;
     public MoveToMouse moveTo;
     public RopeMiniGame rope;
+    public ParticleSystem water1;
+    public ParticleSystem water2;
 
     public GameObject raft;
     // Start is called before the first frame update
@@ -36,6 +38,8 @@ public class RaftMovement : MonoBehaviour
             playerCamera.SetActive(true);
             raft.SetActive(true);
             Cursor.lockState = CursorLockMode.Locked; // Lock the cursor to the center of the screen
+            water1.Play();
+            water2.Play();
 
             gameObject.transform.rotation = Quaternion.Euler(0, 90, 0);
             // Get input from the horizontal and vertical axes
