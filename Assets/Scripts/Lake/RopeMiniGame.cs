@@ -14,6 +14,7 @@ public class RopeMiniGame : MonoBehaviour
     public GameObject gameUI;
     public bool isStarting = false;
 
+    public bool isRaymondFinished = false;
     private void Start()
     {
         isStarting = false;
@@ -61,6 +62,7 @@ public class RopeMiniGame : MonoBehaviour
             Time.timeScale = 1f;
             gameUI.SetActive(false);
             isStarting = false;
+            isRaymondFinished = true;
         }
     }
 
