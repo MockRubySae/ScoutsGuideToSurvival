@@ -19,6 +19,8 @@ public class RaftMovement : MonoBehaviour
     public ParticleSystem water1;
     public ParticleSystem water2;
 
+    public PauseMenu pause;
+
     public GameObject raft;
     // Start is called before the first frame update
     void Start()
@@ -37,7 +39,14 @@ public class RaftMovement : MonoBehaviour
             mainCam.SetActive(false);
             playerCamera.SetActive(true);
             raft.SetActive(true);
-            Cursor.lockState = CursorLockMode.Locked; // Lock the cursor to the center of the screen
+            if(pause.isPaused == false)
+            {
+                Cursor.lockState = CursorLockMode.Locked; // Lock the cursor to the center of the screen
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.None; // Lock the cursor to the center of the screen
+            }
             water1.Play();
             water2.Play();
 
