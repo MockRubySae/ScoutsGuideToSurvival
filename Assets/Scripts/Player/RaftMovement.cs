@@ -27,6 +27,7 @@ public class RaftMovement : MonoBehaviour
     {
         rb = gameObject.GetComponent<Rigidbody>();
         agent = gameObject.GetComponent<NavMeshAgent>();
+        rb.interpolation = RigidbodyInterpolation.None;
     }
 
     // Update is called once per frame
@@ -47,6 +48,7 @@ public class RaftMovement : MonoBehaviour
             {
                 Cursor.lockState = CursorLockMode.None; // Lock the cursor to the center of the screen
             }
+            rb.interpolation = RigidbodyInterpolation.Interpolate;
             water1.Play();
             water2.Play();
 
