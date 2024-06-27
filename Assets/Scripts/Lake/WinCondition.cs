@@ -5,9 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class WinCondition : MonoBehaviour
 {
+    public int cutscene;
     // Start is called before the first frame update
     public void OnCollisionEnter(Collision collision)
     {
-        SceneManager.LoadScene(0);// load
+        Cursor.lockState = CursorLockMode.None;
+        SceneManager.LoadScene(cutscene);// load
     }
 }

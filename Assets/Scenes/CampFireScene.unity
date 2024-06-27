@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2263.172, g: 2404.547, b: 3502.02, a: 1}
+  m_IndirectSpecularColor: {r: 2262.555, g: 2404.0588, b: 3501.6724, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1076,6 +1076,74 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1395194446}
   isPaused: 0
+--- !u!1001 &679702203
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: b53c4a10611d87f43ba835d77c972505,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.573289
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b53c4a10611d87f43ba835d77c972505,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.7567897
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b53c4a10611d87f43ba835d77c972505,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.4758224
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b53c4a10611d87f43ba835d77c972505,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b53c4a10611d87f43ba835d77c972505,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b53c4a10611d87f43ba835d77c972505,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b53c4a10611d87f43ba835d77c972505,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b53c4a10611d87f43ba835d77c972505,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b53c4a10611d87f43ba835d77c972505,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b53c4a10611d87f43ba835d77c972505,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b53c4a10611d87f43ba835d77c972505,
+        type: 3}
+      propertyPath: m_Name
+      value: tent_02
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b53c4a10611d87f43ba835d77c972505, type: 3}
 --- !u!1 &681838767
 GameObject:
   m_ObjectHideFlags: 0
@@ -1194,7 +1262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a86e245a679259c4e800dc202eeddb8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 2
+  level: 3
   fireMini: {fileID: 1991928397}
 --- !u!1 &734211663
 GameObject:
@@ -2666,3 +2734,4 @@ SceneRoots:
   - {fileID: 681838771}
   - {fileID: 1991928401}
   - {fileID: 2005153219}
+  - {fileID: 679702203}
