@@ -1,15 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class WinCondition : MonoBehaviour
 {
-    public int cutscene;
+    public RayCast rayCastScript;
     // Start is called before the first frame update
-    public void OnCollisionEnter(Collision collision)
+    void Start()
     {
-        Cursor.lockState = CursorLockMode.None;
-        SceneManager.LoadScene(cutscene);// load
+        rayCastScript = FindObjectOfType<RayCast>();
+        rayCastScript.canMove = true;
     }
+    public void winCondition()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    //SceneManager.LoadScene(cutscene);// load
+    
 }
