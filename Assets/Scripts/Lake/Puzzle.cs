@@ -22,6 +22,7 @@ public class Puzzle : MonoBehaviour
     private Transform draggingPiece = null;
     private Vector3 offset;
     private int piecesCorrect;
+    public Camera m_Camera;
 
     // Start is called before the first frame update
     void Start()
@@ -42,7 +43,7 @@ public class Puzzle : MonoBehaviour
         //place pieces randomly into the visible area
         Scatter();
         //makes it so the character doesnt move around once the puzzle appears
-        rayCastScript.canMove = false;
+        rayCastScript.enabled = false;
         //update the border to fit the chosen puzzle
         UpdateBorder();
 
@@ -158,12 +159,13 @@ public class Puzzle : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
-                RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-                if (hit)
+                Ray ray = m_Camera.ScreenPointToRay(Input.mousePosition);
+                RaycastHit hit;
+                if (Physics.Raycast(ray, out hit, 100))
                 {
                     //everything is moveable, so we dont need to check its a piece
                     draggingPiece = hit.transform;
-                    offset = draggingPiece.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                    offset = draggingPiece.position - m_Camera.ScreenToWorldPoint(Input.mousePosition);
                     offset += Vector3.back;
                 }
             }
@@ -178,7 +180,7 @@ public class Puzzle : MonoBehaviour
 
             if (draggingPiece)
             {
-                Vector3 newPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                Vector3 newPosition = m_Camera.ScreenToWorldPoint(Input.mousePosition);
                 newPosition += offset;
                 draggingPiece.position = newPosition;
             }
