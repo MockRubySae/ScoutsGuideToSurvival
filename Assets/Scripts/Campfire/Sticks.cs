@@ -10,11 +10,14 @@ public class Sticks : MonoBehaviour
     public GameObject indicator;
     public MoveToMouse move;
 
+    public Animator animator;
+
     bool destroyStick = false;
     public void CollectStick()
     {
         numOfSticksCollected++;
         move.agent.speed = 0;
+        animator.SetBool("pickup", true);
         indicator.SetActive(true);
         StartCoroutine(ControlDesableTime());
     }
@@ -22,7 +25,8 @@ public class Sticks : MonoBehaviour
     IEnumerator ControlDesableTime()
     {
         yield return new WaitForSeconds(3);
-        move.agent.speed = 3.5f;
+        move.agent.speed = 6;
+        animator.SetBool("pickup", false);
         indicator.SetActive(false);
         destroyStick = true;
     }

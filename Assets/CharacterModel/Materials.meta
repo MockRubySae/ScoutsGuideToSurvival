@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 78e88f3a633d5774898f1ba842586197
+<<<<<<<< HEAD:Assets/CharacterModel/Materials.meta
+guid: 0aa32623bfdb3f94cae52e855db6f6d9
+========
+guid: ada7712e0368e4a419db9ad93008e653
+>>>>>>>> Jarel-Asset-Overhaul:Assets/Jarel's Overhauls/Firestarter.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.UI;
 
 public class FireMiniGame : MonoBehaviour
@@ -14,6 +15,8 @@ public class FireMiniGame : MonoBehaviour
     float score = 0;
     public Image image;
     public bool complete = false;
+    public Animator animator;
+    public NavMeshAgent agent;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +29,7 @@ public class FireMiniGame : MonoBehaviour
         if (start)
         {
             fireUI.SetActive(true);
+            animator.SetBool("crouching", true);
             MiniGame();
         }
     }
@@ -37,7 +41,7 @@ public class FireMiniGame : MonoBehaviour
             if(stick.numOfSticksCollected == 3)
             {
                 start = true;
-                Time.timeScale = 0;
+                agent.speed = 0;
             }
         }
     }
@@ -62,8 +66,9 @@ public class FireMiniGame : MonoBehaviour
         {
             start = false;
             fireUI.SetActive(false);
-            Time.timeScale = 1;
             complete = true;
+            agent.speed = 6;
+            animator.SetBool("crouching", false);
         }
         else if(score < 100 && score > 0)
         {

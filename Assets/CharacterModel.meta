@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 92fe6533c8393ea4db4bbae46b0017eb
+<<<<<<<< HEAD:Assets/CharacterModel.meta
+guid: a3b33d2e757ebb8439456fbfa0f55520
+========
+guid: 47ff54cb6e48e7d4bb56e22831f613dd
+>>>>>>>> Jarel-Asset-Overhaul:Assets/Jarel's Overhauls.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

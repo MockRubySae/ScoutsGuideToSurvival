@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 3e550fd11d1e1c841b2a357591836878
+<<<<<<<< HEAD:Assets/InfiniteRunnerPrefabs.meta
+guid: 57ad78f471931714abad16003cd2ca89
+========
+guid: 236e9d2a4b528e140a8a3b8b462dda5b
+>>>>>>>> Jarel-Asset-Overhaul:Assets/Player Overhaul/Animations.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

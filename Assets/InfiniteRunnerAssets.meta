@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: d171888adc502dc49a767ac40b026005
+<<<<<<<< HEAD:Assets/InfiniteRunnerAssets.meta
+guid: 042b135a4cf468a4fa121ecc20b6eeb2
+========
+guid: 86b99e37eb08a61448c8ff84e9c8e9a7
+>>>>>>>> Jarel-Asset-Overhaul:Assets/Player Overhaul.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
