@@ -30,12 +30,8 @@ public class RayCast : MonoBehaviour
             if (Physics.Raycast(ray, out hit, 100, ground))
             {
                 destination = hit.point;
-                Debug.Log(hit.point);
+              //  Debug.Log(hit.point);
             }
-        }
-        else
-        {
-            Debug.Log("cant move");
         }
     }
 }
