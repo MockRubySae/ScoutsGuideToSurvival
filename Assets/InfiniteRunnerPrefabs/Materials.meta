@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/InfiniteRunnerPrefabs/Materials.meta
 guid: 92ab4cf8770b7ae4da2b20d72dbe05c8
+========
+guid: ce08fadcc011be44fa7325d02eb7c806
+>>>>>>>> origin/Lake:Assets/LakeAssets/Puzzle pieces.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

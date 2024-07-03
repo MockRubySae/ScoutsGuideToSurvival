@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Ground textures pack/Grass & dead leafs 01/Materials.meta
 guid: 5313a0aec83cbb04895757865a8f4dfa
+========
+guid: 888ba034a4c61264ba8dc5a551dc4976
+>>>>>>>> origin/Lake:Assets/Scenes/LakeScene/Materials.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
