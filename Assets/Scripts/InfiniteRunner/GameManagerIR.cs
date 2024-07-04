@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameManagerIR : MonoBehaviour
 {
@@ -15,9 +16,11 @@ public class GameManagerIR : MonoBehaviour
 
     public GameObject WinPanel;
 
-    public Text timerSeconds;
+    public TextMeshProUGUI timer;
 
     public float gameTimer;
+
+    public bool loadScene = false;
 
 
 
@@ -31,7 +34,7 @@ public class GameManagerIR : MonoBehaviour
     {
 
         
-        gameTimer = 10f;
+        gameTimer = 5f;
         RetryPanel.SetActive(false);
         WinPanel.SetActive(false);
        
@@ -43,6 +46,11 @@ public class GameManagerIR : MonoBehaviour
     {
         gameTimer -= Time.deltaTime;
         WinCondition();
+        timer.text = gameTimer.ToString("0");
+        if(loadScene)
+        {
+            StartCoroutine(LoadFinalCutscene());
+        }
        
         
     }
@@ -58,10 +66,17 @@ public class GameManagerIR : MonoBehaviour
         if (playerMovement.alive == true && gameTimer <= 0)
         {
             Debug.Log("Win");
+            loadScene = true;
+            Time.timeScale = 0;
             WinPanel.SetActive (true);
-           
-            SceneManager.LoadScene(5);
         }
 
+    }
+
+
+    IEnumerator LoadFinalCutscene()
+    {
+        yield return new WaitForSecondsRealtime(3);
+        SceneManager.LoadScene(5);
     }
 }
