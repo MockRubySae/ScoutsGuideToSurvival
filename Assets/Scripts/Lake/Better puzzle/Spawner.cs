@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Spawner : MonoBehaviour
 {
@@ -16,6 +17,11 @@ public class Spawner : MonoBehaviour
     bool[] conditionTriggeredRotate = new bool[30]; // Array to track which conditions have been triggered
     [SerializeField]int rightRotate = 0;
     public bool youWin = false;
+    public GameObject hintButtonUI;
+    public GameObject raftTimber;
+    public GameObject raftBuilt;
+
+    Vector3 ogCamPos;
 
     private void Start()
     {
@@ -34,6 +40,8 @@ public class Spawner : MonoBehaviour
     {
         if (!hasTrigered)
         {
+            ogCamPos = cam.transform.position;
+            hintButtonUI.SetActive(true);
             move.enabled = false;
             followPlayer.enabled = false;
             for (int i = 0; i < 30; i++)
@@ -219,9 +227,20 @@ public class Spawner : MonoBehaviour
             }
         }
 
-        if (rightRotate == 30)
+        if (rightRotate == 30 && !youWin)
         {
+            hintButtonUI.SetActive(false);
             youWin = true;
+            cam.transform.position = ogCamPos;
+            cam.transform.eulerAngles = new Vector3(cam.transform.eulerAngles.x + 32.652f - 90, cam.transform.eulerAngles.y, cam.transform.eulerAngles.z);
+            Destroy(raftTimber);
+            raftBuilt.SetActive(true);
+
+
+
+            move.enabled = true;
+            followPlayer.enabled = true;
+            SceneManager.LoadScene("Endless runner");
         }
 
 

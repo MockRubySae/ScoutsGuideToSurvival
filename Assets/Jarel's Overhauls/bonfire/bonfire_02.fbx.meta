@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: ca1bffaa3722316408d6cd513a1ace7d
+guid: ef0250d3c578f4e449e2135528f1ded3
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pit
+    second: {fileID: 2100000, guid: 99808ae068bb4ae4ea1588cd43798185, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

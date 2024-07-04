@@ -17,6 +17,7 @@ public class FireMiniGame : MonoBehaviour
     public bool complete = false;
     public Animator animator;
     public NavMeshAgent agent;
+    public GameObject firePartc;
     // Start is called before the first frame update
     void Start()
     {
@@ -68,7 +69,9 @@ public class FireMiniGame : MonoBehaviour
             fireUI.SetActive(false);
             complete = true;
             agent.speed = 6;
+            firePartc.SetActive(true);
             animator.SetBool("crouching", false);
+
         }
         else if(score < 100 && score > 0)
         {
