@@ -39,7 +39,7 @@ public class FireMiniGame : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if(stick.numOfSticksCollected == 3)
+            if(stick.numOfSticksCollected >= 3)
             {
                 start = true;
                 agent.speed = 0;

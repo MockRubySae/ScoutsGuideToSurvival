@@ -38,6 +38,10 @@ Material:
     - _Cutoff: 0.5
     - _DstBlend: 0
     - _DstBlendAlpha: 0
+    - _EmissionEnabled: 0
+    - _EmissionStrength: 0
+    - _EmissionThreshold: 0.3
+    - _OutlineStrength: 0.3
     - _QueueOffset: 0
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
@@ -45,4 +49,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _OutLineColour: {r: 0, g: 0, b: 0, a: 1}
+    - _OutlineColour: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
