@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
+using UnityEngine.UI;
 
 public class Spawner : MonoBehaviour
 {
@@ -20,6 +22,8 @@ public class Spawner : MonoBehaviour
     public GameObject hintButtonUI;
     public GameObject raftTimber;
     public GameObject raftBuilt;
+
+    public WorldCanvasChar charCanvas;
 
     Vector3 ogCamPos;
 
@@ -236,13 +240,22 @@ public class Spawner : MonoBehaviour
             Destroy(raftTimber);
             raftBuilt.SetActive(true);
 
-
-
-            move.enabled = true;
-            followPlayer.enabled = true;
-            SceneManager.LoadScene("Endless runner");
+            StartCoroutine(IntermissionMinigameEnd());
         }
+    }
 
+    IEnumerator IntermissionMinigameEnd()
+    {
+        yield return new WaitForSeconds(0.5f);
+        charCanvas.panel.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        charCanvas.charDialogue.text = "Great! This should be ready to take to the river.";
+        yield return new WaitForSeconds(5f);
+        charCanvas.charDialogue.text = "";
+        charCanvas.panel.SetActive(false);
 
+        move.enabled = true;
+        followPlayer.enabled = true;
+        SceneManager.LoadScene("Endless runner");
     }
 }
