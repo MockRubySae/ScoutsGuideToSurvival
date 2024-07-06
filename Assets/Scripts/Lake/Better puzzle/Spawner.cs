@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
-using UnityEngine.UI;
 
 public class Spawner : MonoBehaviour
 {
@@ -23,7 +22,9 @@ public class Spawner : MonoBehaviour
     public GameObject raftTimber;
     public GameObject raftBuilt;
 
-    public WorldCanvasChar charCanvas;
+    public TextMeshProUGUI charDialog;
+    public GameObject charPanel;
+    public GameObject textInstructions;
 
     Vector3 ogCamPos;
 
@@ -39,12 +40,14 @@ public class Spawner : MonoBehaviour
         line.SetPosition(2, new Vector3(102.5f, 0.1f, 8.5f));
         line.SetPosition(3, new Vector3(96.5f, 0.1f, 8.5f));
 
+        StartCoroutine(MinigameIntro());
     }
     public void OnTriggerEnter(Collider other)
     {
         if (!hasTrigered)
         {
             ogCamPos = cam.transform.position;
+            textInstructions.SetActive(true);
             hintButtonUI.SetActive(true);
             move.enabled = false;
             followPlayer.enabled = false;
@@ -233,6 +236,7 @@ public class Spawner : MonoBehaviour
 
         if (rightRotate == 30 && !youWin)
         {
+            textInstructions.SetActive(false);
             hintButtonUI.SetActive(false);
             youWin = true;
             cam.transform.position = ogCamPos;
@@ -247,15 +251,26 @@ public class Spawner : MonoBehaviour
     IEnumerator IntermissionMinigameEnd()
     {
         yield return new WaitForSeconds(0.5f);
-        charCanvas.panel.SetActive(true);
+        charPanel.SetActive(true);
         yield return new WaitForSeconds(0.5f);
-        charCanvas.charDialogue.text = "Great! This should be ready to take to the river.";
+        charDialog.text = "Great! This should be ready to take to the river.";
         yield return new WaitForSeconds(5f);
-        charCanvas.charDialogue.text = "";
-        charCanvas.panel.SetActive(false);
+        charDialog.text = "";
+        charPanel.SetActive(false);
 
         move.enabled = true;
         followPlayer.enabled = true;
         SceneManager.LoadScene("Endless runner");
+    }
+
+    IEnumerator MinigameIntro()
+    {
+        yield return new WaitForSeconds(0.5f);
+        charPanel.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        charDialog.text = "Alright, I need to put this raft together...";
+        yield return new WaitForSeconds(5f);
+        charDialog.text = "";
+        charPanel.SetActive(false);
     }
 }
