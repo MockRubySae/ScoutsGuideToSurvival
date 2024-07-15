@@ -48,19 +48,43 @@ public class FireMiniGame : MonoBehaviour
     }
     void MiniGame()
     {
-        if(Input.GetKeyDown(KeyCode.A) && aTurn) 
+      
+        
+        if (Input.touchCount > 0)
         {
-            score = score + 5;
-            image.fillAmount = score/100;
-            dTurn = true;
-            aTurn = false;
+            Touch touch = Input.GetTouch(0);
+
+            if (touch.position.x < Screen.width / 2 && aTurn)
+            {
+                score = score + 5;
+                image.fillAmount = score / 100;
+                dTurn = true;
+                aTurn = false;
+            }
+            else if (touch.position.x >= Screen.width / 2 && dTurn)
+            {
+                score = score + 5;
+                image.fillAmount = score / 100;
+                dTurn = false;
+                aTurn = true;
+            }
         }
-        else if(Input.GetKeyDown(KeyCode.D) && dTurn)
+        else
         {
-            score = score + 5;
-            image.fillAmount = score/100;
-            dTurn = false;
-            aTurn = true;
+            if(Input.GetKeyDown(KeyCode.A) && aTurn) 
+            {
+                score = score + 5;
+                image.fillAmount = score/100;
+                dTurn = true;
+                aTurn = false;
+            }
+            else if(Input.GetKeyDown(KeyCode.D) && dTurn)
+            {
+                score = score + 5;
+                image.fillAmount = score/100;
+                dTurn = false;
+                aTurn = true;
+            }
         }
 
         if(score >= 100)

@@ -22,6 +22,8 @@ public class GameManagerIR : MonoBehaviour
 
     public bool loadScene = false;
 
+    public int scene;
+
 
 
     private void Awake()
@@ -34,7 +36,7 @@ public class GameManagerIR : MonoBehaviour
     {
 
         
-        gameTimer = 5f;
+        gameTimer = 60f;
         RetryPanel.SetActive(false);
         WinPanel.SetActive(false);
        
@@ -77,6 +79,6 @@ public class GameManagerIR : MonoBehaviour
     IEnumerator LoadFinalCutscene()
     {
         yield return new WaitForSecondsRealtime(3);
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(scene);
     }
 }

@@ -29,7 +29,19 @@ public void FixedUpdate()
     // Update is called once per frame
     void Update()
     {
-        horizontalInput = Input.GetAxis("Horizontal");
+        if (Input.touchCount > 0)
+        {
+            Touch touch = Input.GetTouch(0); // Get the first touch
+
+            if (touch.phase == TouchPhase.Moved)
+            {
+                horizontalInput = touch.deltaPosition.x;
+            }
+        }
+        else
+        {
+            horizontalInput = Input.GetAxis("Horizontal");
+        }
     }
 
     public void Dead ()
